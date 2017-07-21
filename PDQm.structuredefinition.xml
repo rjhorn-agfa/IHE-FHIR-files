@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-07-05T13:00:09.344-05:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pa" />
+  </extension>
+  <url value="StructureDefinition/PDQm" />
+  <name value="PDQm" />
+  <title value="IHE Patient Demographics Query for Mobile" />
+  <status value="draft" />
+  <date value="2017-07-05T12:48:59.9715386-05:00" />
+  <publisher value="IHE" />
+  <contact>
+    <name value="John Moehrke" />
+  </contact>
+  <description value="The Patient Demographics Query for Mobile (PDQm) Profile defines a lightweight RESTful interface to a patient demographics supplier leveraging technologies readily available to mobile applications and lightweight browser based applications. &#xD;&#xA;&#xD;&#xA;The functionality is identical to the PDQ Profile described in the ITI TF-1:8. The differences are transport and messaging format of messages and queries. The profile leverages HTTP transport, and the JavaScript Object Notation (JSON), Simple-XML, and Representational State Transfer (REST). The payload format is defined by the HL7® FHIR® draft standard. &#xD;&#xA;&#xD;&#xA;Using these patterns, the PDQm Profile exposes the functionality of a patient demographics supplier to mobile applications and lightweight browser applications. &#xD;&#xA;&#xD;&#xA;The following list provides a few examples of how PDQm might be leveraged by implementers:&#xD;&#xA;&#xD;&#xA;* A health portal securely exposing demographics data to browser based plugins &#xD;&#xA;* Medical devices which need to access patient demographic information&#xD;&#xA;* Mobile devices used by physicians (example bedside eCharts) which need to establish patient context by scanning a bracelet &#xD;&#xA;* Web based EHR/EMR applications which wish to provide dynamic updates of patient demographic information such as a non-postback search, additional demographic detail, etc. &#xD;&#xA;* Any low resource application which exposes patient demographic search functionality&#xD;&#xA;* Any application using the MHD Profile to access documents may use PDQm to find an appropriate patient identifier&#xD;&#xA;&#xD;&#xA;This supplement is intended to be fully compliant with the HL7 FHIR specification, providing only use-case driven constraints to aid with interoperability, deterministic results, and compatibility with existing PDQ and PDQv3 Profiles.&#xD;&#xA;&#xD;&#xA;Currently the HL7® FHIR® standard is in “Standard for Test Use” (STU) and may experience a large amount of change during this phase. Readers are advised that, while the profiled components in this supplement may not accurately reflect the most recent version of the FHIR &#xD;&#xA;" />
+  <purpose value="Lightweight RESTful query interface to a patient demographics supplier." />
+  <copyright value="IHE" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient" />
+  <derivation value="constraint" />
+</StructureDefinition>
