@@ -1,0 +1,142 @@
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="mCSD_ITI-90_HealthcareService"/> 
+  <text> 
+    <status value="generated"/> 
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p> The Server supports the following transactions for the resource HealthcareService: search-type</p>
+         
+    </div> 
+  </text> 
+  <url value="ftp://ihe.net/SOMETHING/mCSDCapabilityStatement_ITI-90_HealthcareService.xml"/> 
+  <version value="20170720"/> 
+  <name value="IHE ITI mCSD ITI-90 HealthcareService"/> 
+  <title value="IHE ITI mCSD ITI-90 HealthcareService capability statement"/> 
+  <status value="draft"/> 
+  <experimental value="true"/> 
+  <date value="2017-07-20"/> 
+  <publisher value="IHE ITI"/> 
+  <contact> 
+    <name value="System Administrator"/> 
+    <telecom> 
+      <system value="email"/> 
+      <value value=""/> 
+    </telecom> 
+  </contact> 
+  <description value="This is the FHIR capability statement for the main IHE ITI mCSD Profile for ITI-90 with the HealthcareService option"/>
+  <purpose value="IHE ITI mCSD ITI-90 HealthcareService capability statement, published for contracting and operational support"/> 
+  <copyright value="Copyright © "/> 
+  <kind value="instance"/> 
+  <fhirVersion value="3.0.1"/> 
+  <!--    this system accepts unknown content in the resources    -->
+  <acceptUnknown value="no"/> 
+  <!--    this system can do either xml or json. (Listing both implies full support for either,
+   with interconversion)    -->
+  <format value="xml"/> 
+  <format value="json"/> 
+  <!--    this system supports the -->
+  <implementationGuide value=""/> 
+  <rest> 
+    <mode value="server"/> 
+    <documentation value="IHE ITI mCSD ITI-90 endpoint for HealthcareService"/> 
+    <resource> 
+      <type value="HealthcareService"/> 
+      <profile> 
+        <reference value="ftp://ihe.net/.../mCSD_ITI-90_HealthcareService_StructureDefinition.xml"/> 
+      </profile> 
+      <documentation value="."/> 
+      <interaction> 
+        <code value="search-type"/> 
+      </interaction> 
+      <!--<searchInclude value=""/> -->
+      <searchParam> 
+        <name value="active"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="identifier"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="location"/> 
+        <type value="reference"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="name"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="name:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="name:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization"/> 
+        <type value="reference"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="type"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <!-- When the Organization option is also supported uncomment the following -->
+      <!--
+      <searchParam> 
+        <name value="organization.active"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.identifier"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.name"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.name:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.name:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+      -->
+      <!-- End of Organization option additions -->
+      <!-- When the Location option is also supported uncomment the following -->
+      <!--
+      <searchParam> 
+        <name value="location.status"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="location.identifier"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="location.name"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="location.name:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="location.name:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+      -->
+      <!-- End of Location option additions -->
+    </resource> 
+    <searchParam> 
+      <name value="_id"/> 
+      <type value="token"/> 
+    </searchParam> 
+    <searchParam> 
+      <name value="_lastUpdated"/> 
+      <type value="token"/> 
+      <documentation>The values for this shall support these prefixes: gt, lt, ge, le, sa, and eb</documentation>
+    </searchParam> 
+  </rest> 
+</CapabilityStatement> 

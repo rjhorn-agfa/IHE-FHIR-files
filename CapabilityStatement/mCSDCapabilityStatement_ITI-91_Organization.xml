@@ -1,0 +1,57 @@
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="mCSD_ITI-91_Organization"/> 
+  <text> 
+    <status value="generated"/> 
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p> The Server supports the following transactions for the resource Organization: history-type</p>
+         
+    </div> 
+  </text> 
+  <url value="ftp://ihe.net/SOMETHING/mCSDCapabilityStatement_ITI-91_Organization.xml"/> 
+  <version value="20170720"/> 
+  <name value="IHE ITI mCSD ITI-91 Organization"/> 
+  <title value="IHE ITI mCSD ITI-91 Organization capability statement"/> 
+  <status value="draft"/> 
+  <experimental value="true"/> 
+  <date value="2017-07-20"/> 
+  <publisher value="IHE ITI"/> 
+  <contact> 
+    <name value="System Administrator"/> 
+    <telecom> 
+      <system value="email"/> 
+      <value value=""/> 
+    </telecom> 
+  </contact> 
+  <description value="This is the FHIR capability statement for the main IHE ITI mCSD Profile for ITI-91 with the Organization option"/>
+  <purpose value="IHE ITI mCSD ITI-91 Organization capability statement, published for contracting and operational support"/> 
+  <copyright value="Copyright © "/> 
+  <kind value="instance"/> 
+  <fhirVersion value="3.0.1"/> 
+  <!--    this system accepts unknown content in the resources    -->
+  <acceptUnknown value="no"/> 
+  <!--    this system can do either xml or json. (Listing both implies full support for either,
+   with interconversion)    -->
+  <format value="xml"/> 
+  <format value="json"/> 
+  <!--    this system supports the -->
+  <implementationGuide value=""/> 
+  <rest> 
+    <mode value="server"/> 
+    <documentation value="IHE ITI mCSD ITI-91 endpoint for Organization"/> 
+    <resource> 
+      <type value="Organization"/> 
+      <profile> 
+        <reference value="ftp://ihe.net/.../mCSD_ITI-91_Organization_StructureDefinition.xml"/> 
+      </profile> 
+      <documentation value="."/> 
+      <interaction> 
+        <code value="history-type"/> 
+      </interaction> 
+      <!--<searchInclude value=""/> -->
+      <searchParam> 
+        <name value="_since"/> 
+        <type value="date"/> 
+      </searchParam> 
+    </resource> 
+  </rest> 
+</CapabilityStatement> 
