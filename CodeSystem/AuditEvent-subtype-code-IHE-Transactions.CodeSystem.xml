@@ -1,0 +1,391 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="https://github.com/rjhorn-agfa/IHE-FHIR-files/CodeSystem/AuditEvent-subtype-code-IHE-Transactions.CodeSystem" />
+  <url value="urn:ihe:event-type-code" />
+  <name value="IHE Transaction Unique Identifiers" />
+  <title value="IHE Transaction numbers" />
+  <status value="draft" />
+  <publisher value="IHE" />
+  <description value="Transaction numbers are assigned, these values are  also used in AuditEvent logs." />
+  <content value="fragment" />
+  <concept>
+    <code value="PCC" />
+    <display value="IHE Patient Care Coordination Domain" />
+    <concept>
+      <code value="PCC-1" />
+      <display value="Share Content" />
+    </concept>
+    <concept>
+      <code value="PCC-44" />
+      <display value="Mobile Query Existing Data" />
+    </concept>
+  </concept>
+  <concept>
+    <code value="ITI" />
+    <display value="IHE IT Infrastructure" />
+    <concept>
+      <code value="ITI-01" />
+      <display value="Maintain Time" />
+    </concept>
+    <concept>
+      <code value="ITI-02" />
+      <display value="Get User Authenticated" />
+    </concept>
+    <concept>
+      <code value="ITI-03" />
+      <display value="Get Service Ticket" />
+    </concept>
+    <concept>
+      <code value="ITI-04" />
+      <display value="Kerberized Communication" />
+    </concept>
+    <concept>
+      <code value="ITI-05" />
+      <display value="Join Context" />
+    </concept>
+    <concept>
+      <code value="ITI-06" />
+      <display value="Change Context" />
+    </concept>
+    <concept>
+      <code value="ITI-07" />
+      <display value="Leave Context" />
+    </concept>
+    <concept>
+      <code value="ITI-08" />
+      <display value="Patient Identity Feed" />
+      <definition value="Patient Identity Feed" />
+    </concept>
+    <concept>
+      <code value="ITI-09" />
+      <display value="PIX Query" />
+    </concept>
+    <concept>
+      <code value="ITI-10" />
+      <display value="PIX Update Notification" />
+    </concept>
+    <concept>
+      <code value="ITI-11" />
+      <display value="Retrieve Specific Information for Display" />
+    </concept>
+    <concept>
+      <code value="ITI-12" />
+      <display value="Retrieve Document for Display" />
+    </concept>
+    <concept>
+      <code value="ITI-13" />
+      <display value="Follow Context" />
+    </concept>
+    <concept>
+      <code value="ITI-14" />
+      <display value="Register Document Set" />
+    </concept>
+    <concept>
+      <code value="ITI-15" />
+      <display value="Provide and Register Document Set" />
+    </concept>
+    <concept>
+      <code value="ITI-16" />
+      <display value="Query Registry" />
+    </concept>
+    <concept>
+      <code value="ITI-17" />
+      <display value="Retrieve Document" />
+    </concept>
+    <concept>
+      <code value="ITI-18" />
+      <display value="Stored Query" />
+    </concept>
+    <concept>
+      <code value="ITI-19" />
+      <display value="Authenticate Node" />
+    </concept>
+    <concept>
+      <code value="ITI-20" />
+      <display value="Record Audit Event" />
+    </concept>
+    <concept>
+      <code value="ITI-21" />
+      <display value="Patient Demographic Query" />
+    </concept>
+    <concept>
+      <code value="ITI-22" />
+      <display value="Patient Demographic Visit Query" />
+    </concept>
+    <concept>
+      <code value="ITI-23" />
+      <display value="Find Personnel White Pages" />
+    </concept>
+    <concept>
+      <code value="ITI-24" />
+      <display value="Query Personnel White Pages" />
+    </concept>
+    <concept>
+      <code value="ITI-25" />
+      <display value="Send Notification" />
+    </concept>
+    <concept>
+      <code value="ITI-26" />
+      <display value="Receive Notification" />
+    </concept>
+    <concept>
+      <code value="ITI-27" />
+      <display value="Send Acknowledgement" />
+    </concept>
+    <concept>
+      <code value="ITI-28" />
+      <display value="Retrieve Acknowledgement" />
+    </concept>
+    <concept>
+      <code value="ITI-29" />
+      <display value="Cross Enterprise User Authentication (Cancelled in favor of ITI-40)" />
+    </concept>
+    <concept>
+      <code value="ITI-30" />
+      <display value="Patient Identity Management" />
+    </concept>
+    <concept>
+      <code value="ITI-31" />
+      <display value="Patient Encounter Management" />
+    </concept>
+    <concept>
+      <code value="ITI-32" />
+      <display value="Distribute Document Set on Media" />
+    </concept>
+    <concept>
+      <code value="ITI-33" />
+      <display value="Send Document Set (Unused)" />
+    </concept>
+    <concept>
+      <code value="ITI-34" />
+      <display value="Retrieve Form" />
+    </concept>
+    <concept>
+      <code value="ITI-35" />
+      <display value="Submit Form" />
+    </concept>
+    <concept>
+      <code value="ITI-36" />
+      <display value="Archive Form" />
+    </concept>
+    <concept>
+      <code value="ITI-37" />
+      <display value="Retrieve Clarifications" />
+    </concept>
+    <concept>
+      <code value="ITI-38" />
+      <display value="Cross Gateway Query" />
+    </concept>
+    <concept>
+      <code value="ITI-39" />
+      <display value="Cross Gateway Retrieve" />
+    </concept>
+    <concept>
+      <code value="ITI-40" />
+      <display value="Provide X-User Assertion" />
+    </concept>
+    <concept>
+      <code value="ITI-41" />
+      <display value="Provide and Register Document Set-b" />
+    </concept>
+    <concept>
+      <code value="ITI-42" />
+      <display value="Register Document Set-b" />
+    </concept>
+    <concept>
+      <code value="ITI-43" />
+      <display value="Retrieve Document Set" />
+    </concept>
+    <concept>
+      <code value="ITI-44" />
+      <display value="Patient Identity Feed HL7 V3" />
+    </concept>
+    <concept>
+      <code value="ITI-45" />
+      <display value="PIXV3 Query" />
+    </concept>
+    <concept>
+      <code value="ITI-46" />
+      <display value="PIXV3 Update Notification" />
+    </concept>
+    <concept>
+      <code value="ITI-47" />
+      <display value="Patient Demographics Query HL7 V3" />
+    </concept>
+    <concept>
+      <code value="ITI-48" />
+      <display value="Retrieve Value Set" />
+    </concept>
+    <concept>
+      <code value="ITI-49" />
+      <display value="Convey Printed Referral Request" />
+    </concept>
+    <concept>
+      <code value="ITI-50" />
+      <display value="Request Referral" />
+    </concept>
+    <concept>
+      <code value="ITI-51" />
+      <display value="Multi-Patient Query" />
+    </concept>
+    <concept>
+      <code value="ITI-52" />
+      <display value="Document Metadata Subscribe" />
+    </concept>
+    <concept>
+      <code value="ITI-53" />
+      <display value="Document Metadata Publish" />
+    </concept>
+    <concept>
+      <code value="ITI-54" />
+      <display value="Document Metadata Publish" />
+    </concept>
+    <concept>
+      <code value="ITI-55" />
+      <display value="Cross Gateway Patient Discovery" />
+    </concept>
+    <concept>
+      <code value="ITI-56" />
+      <display value="Patient Location Query" />
+    </concept>
+    <concept>
+      <code value="ITI-57" />
+      <display value="Update Document Set" />
+    </concept>
+    <concept>
+      <code value="ITI-58" />
+      <display value="Provider Information Query" />
+    </concept>
+    <concept>
+      <code value="ITI-59" />
+      <display value="Provider Information Feed" />
+    </concept>
+    <concept>
+      <code value="ITI-60" />
+      <display value="Retrieve Multiple Value Sets" />
+    </concept>
+    <concept>
+      <code value="ITI-61" />
+      <display value="Register On-Demand Document Entry" />
+    </concept>
+    <concept>
+      <code value="ITI-62" />
+      <display value="Delete Document Set" />
+    </concept>
+    <concept>
+      <code value="ITI-63" />
+      <display value="Cross Gateway Fetch" />
+    </concept>
+    <concept>
+      <code value="ITI-64" />
+      <display value="Notify XAP-PID Link Change" />
+    </concept>
+    <concept>
+      <code value="ITI-65" />
+      <display value="Provide Document Bundle" />
+    </concept>
+    <concept>
+      <code value="ITI-66" />
+      <display value="Find Document Manifests" />
+    </concept>
+    <concept>
+      <code value="ITI-67" />
+      <display value="Find Document References" />
+    </concept>
+    <concept>
+      <code value="ITI-68" />
+      <display value="Retrieve Document" />
+    </concept>
+    <concept>
+      <code value="ITI-69" />
+      <display value="Create Destroy Pull Point" />
+    </concept>
+    <concept>
+      <code value="ITI-70" />
+      <display value="Pull Notification" />
+    </concept>
+    <concept>
+      <code value="ITI-71" />
+      <display value="Get Authorization TOken" />
+    </concept>
+    <concept>
+      <code value="ITI-72" />
+      <display value="Incorporate Authorization Token" />
+    </concept>
+    <concept>
+      <code value="ITI-73" />
+      <display value="Find Matching Services" />
+    </concept>
+    <concept>
+      <code value="ITI-74" />
+      <display value="Query for Updated Services" />
+    </concept>
+    <concept>
+      <code value="ITI-75" />
+      <display value="Care Services Free Busy Query" />
+    </concept>
+    <concept>
+      <code value="ITI-76" />
+      <display value="Patient Location Trackng Feed" />
+    </concept>
+    <concept>
+      <code value="ITI-77" />
+      <display value="Patient Location Tracking Query" />
+    </concept>
+    <concept>
+      <code value="ITI-78" />
+      <display value="Mobile Patient Demographics Query" />
+    </concept>
+    <concept>
+      <code value="ITI-79" />
+      <display value="Authorize Decisions Query" />
+    </concept>
+    <concept>
+      <code value="ITI-80" />
+      <display value="Cross-Gateway Document Provide" />
+    </concept>
+    <concept>
+      <code value="ITI-81" />
+      <display value="Retrieve ATNA Audit Event" />
+    </concept>
+    <concept>
+      <code value="ITI-82" />
+      <display value="Retrieve Syslog Event" />
+    </concept>
+    <concept>
+      <code value="ITI-83" />
+      <display value="Mobile Patient Identifier Cross-Reference Query" />
+    </concept>
+    <concept>
+      <code value="ITI-84" />
+      <display value="Mobile Report Alert" />
+    </concept>
+    <concept>
+      <code value="ITI-85" />
+      <display value="Query for Alert Status" />
+    </concept>
+    <concept>
+      <code value="ITI-86" />
+      <display value="Remove Documents" />
+    </concept>
+    <concept>
+      <code value="ITI-87" />
+      <display value="Submit File" />
+    </concept>
+    <concept>
+      <code value="ITI-88" />
+      <display value="Search File" />
+    </concept>
+    <concept>
+      <code value="ITI-89" />
+      <display value="Update DocumentReferences" />
+    </concept>
+    <concept>
+      <code value="ITI-90" />
+      <display value="Find Matching Care Services" />
+    </concept>
+    <concept>
+      <code value="ITI-91" />
+      <display value="Reqest Care Services Updates" />
+    </concept>
+  </concept>
+</CodeSystem>
