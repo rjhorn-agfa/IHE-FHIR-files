@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-08-03T13:16:55.412-05:00" />
+  </meta>
+  <url value="http://ihe.net/fhir/StructureDefinition/QEDmProvenance" />
+  <name value="QEDmProvenance" />
+  <status value="draft" />
+  <date value="2017-08-02T21:05:21.494-05:00" />
+  <description value="Provenance profile for use in QEDm when the data-elements (Resources pointed to by target) come from an XDS or MHD document" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Provenance" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Provenance" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Provenance.policy">
+      <path value="Provenance.policy" />
+      <min value="1" />
+      <max value="1" />
+      <fixedUri value="urn:ihe:pcc:qedm:2017:document-provenance-policy" />
+    </element>
+    <element id="Provenance.activity">
+      <path value="Provenance.activity" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.activity.system">
+      <path value="Provenance.activity.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/w3c-provenance-activity-type" />
+    </element>
+    <element id="Provenance.activity.code">
+      <path value="Provenance.activity.code" />
+      <min value="1" />
+      <fixedCode value="Derivation" />
+    </element>
+    <element id="Provenance.activity.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Provenance.activity.display" />
+      <short value="wasDerivedFrom" />
+      <definition value="A transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity. For an entity to be transformed from, created from, or resulting from an update to another, there must be some underpinning activity or activities performing the necessary action(s) resulting in such a derivation." />
+    </element>
+    <element id="Provenance.agent">
+      <path value="Provenance.agent" />
+      <max value="1" />
+    </element>
+    <element id="Provenance.agent.role.coding.system">
+      <path value="Provenance.agent.role.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/v3/ParticipationFunction" />
+    </element>
+    <element id="Provenance.agent.role.coding.code">
+      <path value="Provenance.agent.role.coding.code" />
+      <min value="1" />
+      <fixedCode value="ASSEMBLER" />
+    </element>
+    <element id="Provenance.agent.who[x]">
+      <path value="Provenance.agent.who[x]" />
+      <type>
+        <code value="uri" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+      </type>
+    </element>
+    <element id="Provenance.agent.onBehalfOf[x]">
+      <path value="Provenance.agent.onBehalfOf[x]" />
+      <type>
+        <code value="uri" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+      </type>
+    </element>
+    <element id="Provenance.agent.relatedAgentType">
+      <path value="Provenance.agent.relatedAgentType" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.entity">
+      <path value="Provenance.entity" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="role" />
+        </discriminator>
+        <discriminator>
+          <type value="type" />
+          <path value="what[x]" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Provenance.entity:XDS">
+      <path value="Provenance.entity" />
+      <sliceName value="XDS" />
+    </element>
+    <element id="Provenance.entity:XDS.role">
+      <path value="Provenance.entity.role" />
+      <fixedCode value="source" />
+    </element>
+    <element id="Provenance.entity:XDS.what[x]:whatIdentifier">
+      <path value="Provenance.entity.whatIdentifier" />
+      <sliceName value="whatIdentifier" />
+      <type>
+        <code value="Identifier" />
+      </type>
+    </element>
+    <element id="Provenance.entity:XDS.what[x]:whatIdentifier.type">
+      <path value="Provenance.entity.whatIdentifier.type" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.entity:XDS.what[x]:whatIdentifier.type.coding">
+      <path value="Provenance.entity.whatIdentifier.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Provenance.entity:XDS.what[x]:whatIdentifier.type.coding.system">
+      <path value="Provenance.entity.whatIdentifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="urn:ietf:rfc:3986" />
+    </element>
+    <element id="Provenance.entity:XDS.what[x]:whatIdentifier.type.coding.code">
+      <path value="Provenance.entity.whatIdentifier.type.coding.code" />
+      <short value="The Identifier is a document uniqueID" />
+      <definition value="Indicates that this entity is a document uniqueID available in Document Sharing." />
+      <min value="1" />
+      <fixedCode value="urn:ihe:iti:xds:2013:uniqueId" />
+    </element>
+    <element id="Provenance.entity:XDS.what[x]:whatIdentifier.system">
+      <path value="Provenance.entity.whatIdentifier.system" />
+      <short value="holds the XDS RepositoryUniqueId" />
+      <definition value="The XDS RepositoryUniqueId is the identifier of the repository from which the document can be retrieved using XDS" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.entity:XDS.what[x]:whatIdentifier.value">
+      <path value="Provenance.entity.whatIdentifier.value" />
+      <short value="The XDS documentUniqueId" />
+      <definition value="The documentUniqueID is the unique identifier of the document. " />
+      <min value="1" />
+    </element>
+    <element id="Provenance.entity:XDS.agent">
+      <path value="Provenance.entity.agent" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.entity:MHD">
+      <path value="Provenance.entity" />
+      <sliceName value="MHD" />
+    </element>
+    <element id="Provenance.entity:MHD.role">
+      <path value="Provenance.entity.role" />
+      <fixedCode value="source" />
+    </element>
+    <element id="Provenance.entity:MHD.what[x]:whatReference">
+      <path value="Provenance.entity.whatReference" />
+      <sliceName value="whatReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

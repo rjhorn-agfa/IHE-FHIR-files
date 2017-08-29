@@ -1,0 +1,401 @@
+{
+  "resourceType": "CodeSystem",
+  "url": "urn:ihe:transactions",
+  "title": "IHE Transaction numbers",
+  "status": "draft",
+  "name": "IHE-Transactions",
+  "id": "IHE-Transactions",
+  "description": "Transaction numbers are assigned, these values are  also used in AuditEvent logs.\n\ncodesystem should be urn:ihe:event-type-code",
+  "publisher": "IHE",
+  "content": "fragment",
+  "concept": [
+  
+   {
+     "code": "PCC",
+	 "display":"IHE Patient Care Coordination Domain",
+	 "concept": [
+    {
+      "code": "PCC-1",
+      "display": "Share Content"
+    },
+    {
+      "code": "PCC-44",
+      "display": "Mobile Query Existing Data"
+    }
+   ]
+  }, 
+ 
+   {
+     "code": "ITI",
+	 "display":"IHE IT Infrastructure",
+	 "concept": [
+    {
+      "code": "ITI-01",
+      "display": "Maintain Time"
+    },
+    {
+      "code": "ITI-02",
+      "display": "Get User Authenticated"
+    },
+    {
+      "code": "ITI-03",
+      "display": "Get Service Ticket"
+    },
+    {
+      "code": "ITI-04",
+      "display": "Kerberized Communication"
+    },
+    {
+      "code": "ITI-05",
+      "display": "Join Context"
+    },
+    {
+      "code": "ITI-06",
+      "display": "Change Context"
+    },
+    {
+      "code": "ITI-07",
+      "display": "Leave Context"
+    },
+    {
+      "code": "ITI-08",
+      "display": "Patient Identity Feed",
+      "definition": "Patient Identity Feed"
+    },
+    {
+      "code": "ITI-09",
+      "display": "PIX Query"
+    },
+    {
+      "code": "ITI-10",
+      "display": "PIX Update Notification"
+    },
+    {
+      "code": "ITI-11",
+      "display": "Retrieve Specific Information for Display"
+    },
+    {
+      "code": "ITI-12",
+      "display": "Retrieve Document for Display"
+    },
+    {
+      "code": "ITI-13",
+      "display": "Follow Context"
+    },
+    {
+      "code": "ITI-14",
+      "display": "Register Document Set"
+    },
+    {
+      "code": "ITI-15",
+      "display": "Provide and Register Document Set"
+    },
+    {
+      "code": "ITI-16",
+      "display": "Query Registry"
+    },
+    {
+      "code": "ITI-17",
+      "display": "Retrieve Document"
+    },
+    {
+      "code": "ITI-18",
+      "display": "Stored Query"
+    },
+    {
+      "code": "ITI-19",
+      "display": "Authenticate Node"
+    },
+    {
+      "code": "ITI-20",
+      "display": "Record Audit Event"
+    },
+    {
+      "code": "ITI-21",
+      "display": "Patient Demographic Query"
+    },
+    {
+      "code": "ITI-22",
+      "display": "Patient Demographic Visit Query"
+    },
+    {
+      "code": "ITI-23",
+      "display": "Find Personnel White Pages"
+    },
+    {
+      "code": "ITI-24",
+      "display": "Query Personnel White Pages"
+    },
+    {
+      "code": "ITI-25",
+      "display": "Send Notification"
+    },
+    {
+      "code": "ITI-26",
+      "display": "Receive Notification"
+    },
+    {
+      "code": "ITI-27",
+      "display": "Send Acknowledgement"
+    },
+    {
+      "code": "ITI-28",
+      "display": "Retrieve Acknowledgement"
+    },
+    {
+      "code": "ITI-29",
+      "display": "Cross Enterprise User Authentication (Cancelled in favor of ITI-40)"
+    },
+    {
+      "code": "ITI-30",
+      "display": "Patient Identity Management"
+    },
+    {
+      "code": "ITI-31",
+      "display": "Patient Encounter Management"
+    },
+    {
+      "code": "ITI-32",
+      "display": "Distribute Document Set on Media"
+    },
+    {
+      "code": "ITI-33",
+      "display": "Send Document Set (Unused)"
+    },
+    {
+      "code": "ITI-34",
+      "display": "Retrieve Form"
+    },
+    {
+      "code": "ITI-35",
+      "display": "Submit Form"
+    },
+    {
+      "code": "ITI-36",
+      "display": "Archive Form"
+    },
+    {
+      "code": "ITI-37",
+      "display": "Retrieve Clarifications"
+    },
+    {
+      "code": "ITI-38",
+      "display": "Cross Gateway Query"
+    },
+    {
+      "code": "ITI-39",
+      "display": "Cross Gateway Retrieve"
+    },
+    {
+      "code": "ITI-40",
+      "display": "Provide X-User Assertion"
+    },
+    {
+      "code": "ITI-41",
+      "display": "Provide and Register Document Set-b"
+    },
+    {
+      "code": "ITI-42",
+      "display": "Register Document Set-b"
+    },
+    {
+      "code": "ITI-43",
+      "display": "Retrieve Document Set"
+    },
+    {
+      "code": "ITI-44",
+      "display": "Patient Identity Feed HL7 V3"
+    },
+    {
+      "code": "ITI-45",
+      "display": "PIXV3 Query"
+    },
+    {
+      "code": "ITI-46",
+      "display": "PIXV3 Update Notification"
+    },
+    {
+      "code": "ITI-47",
+      "display": "Patient Demographics Query HL7 V3"
+    },
+    {
+      "code": "ITI-48",
+      "display": "Retrieve Value Set"
+    },
+    {
+      "code": "ITI-49",
+      "display": "Convey Printed Referral Request"
+    },
+    {
+      "code": "ITI-50",
+      "display": "Request Referral"
+    },
+    {
+      "code": "ITI-51",
+      "display": "Multi-Patient Query"
+    },
+    {
+      "code": "ITI-52",
+      "display": "Document Metadata Subscribe"
+    },
+    {
+      "code": "ITI-53",
+      "display": "Document Metadata Publish"
+    },
+    {
+      "code": "ITI-54",
+      "display": "Document Metadata Publish"
+    },
+    {
+      "code": "ITI-55",
+      "display": "Cross Gateway Patient Discovery"
+    },
+    {
+      "code": "ITI-56",
+      "display": "Patient Location Query"
+    },
+    {
+      "code": "ITI-57",
+      "display": "Update Document Set"
+    },
+    {
+      "code": "ITI-58",
+      "display": "Provider Information Query"
+    },
+    {
+      "code": "ITI-59",
+      "display": "Provider Information Feed"
+    },
+    {
+      "code": "ITI-60",
+      "display": "Retrieve Multiple Value Sets"
+    },
+    {
+      "code": "ITI-61",
+      "display": "Register On-Demand Document Entry"
+    },
+    {
+      "code": "ITI-62",
+      "display": "Delete Document Set"
+    },
+    {
+      "code": "ITI-63",
+      "display": "Cross Gateway Fetch"
+    },
+    {
+      "code": "ITI-64",
+      "display": "Notify XAP-PID Link Change"
+    },
+    {
+      "code": "ITI-65",
+      "display": "Provide Document Bundle"
+    },
+    {
+      "code": "ITI-66",
+      "display": "Find Document Manifests"
+    },
+    {
+      "code": "ITI-67",
+      "display": "Find Document References"
+    },
+    {
+      "code": "ITI-68",
+      "display": "Retrieve Document"
+    },
+    {
+      "code": "ITI-69",
+      "display": "Create Destroy Pull Point"
+    },
+    {
+      "code": "ITI-70",
+      "display": "Pull Notification"
+    },
+    {
+      "code": "ITI-71",
+      "display": "Get Authorization TOken"
+    },
+    {
+      "code": "ITI-72",
+      "display": "Incorporate Authorization Token"
+    },
+    {
+      "code": "ITI-73",
+      "display": "Find Matching Services"
+    },
+    {
+      "code": "ITI-74",
+      "display": "Query for Updated Services"
+    },
+    {
+      "code": "ITI-75",
+      "display": "Care Services Free Busy Query"
+    },
+    {
+      "code": "ITI-76",
+      "display": "Patient Location Trackng Feed"
+    },
+    {
+      "code": "ITI-77",
+      "display": "Patient Location Tracking Query"
+    },
+    {
+      "code": "ITI-78",
+      "display": "Mobile Patient Demographics Query"
+    },
+    {
+      "code": "ITI-79",
+      "display": "Authorize Decisions Query"
+    },
+    {
+      "code": "ITI-80",
+      "display": "Cross-Gateway Document Provide"
+    },
+    {
+      "code": "ITI-81",
+      "display": "Retrieve ATNA Audit Event"
+    },
+    {
+      "code": "ITI-82",
+      "display": "Retrieve Syslog Event"
+    },
+    {
+      "code": "ITI-83",
+      "display": "Mobile Patient Identifier Cross-Reference Query"
+    },
+    {
+      "code": "ITI-84",
+      "display": "Mobile Report Alert"
+    },
+    {
+      "code": "ITI-85",
+      "display": "Query for Alert Status"
+    },
+    {
+      "code": "ITI-86",
+      "display": "Remove Documents"
+    },
+    {
+      "code": "ITI-87",
+      "display": "Submit File"
+    },
+    {
+      "code": "ITI-88",
+      "display": "Search File"
+    },
+    {
+      "code": "ITI-89",
+      "display": "Update DocumentReferences"
+    },
+    {
+      "code": "ITI-90",
+      "display": "Find Matching Care Services"
+    },
+    {
+      "code": "ITI-91",
+      "display": "Reqest Care Services Updates"
+    }
+   ]
+   }
+   ]
+
+}

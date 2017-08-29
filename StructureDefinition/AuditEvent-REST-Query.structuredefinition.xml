@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-08-01T10:58:15.874-05:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="sec" />
+  </extension>
+  <url value="http://www.ihe.net/fhir/StructureDefinition/AuditEvent-REST-Query" />
+  <name value="AuditEvent-REST-Query" />
+  <status value="draft" />
+  <date value="2017-07-27T07:50:22.2844444-05:00" />
+  <description value="Base StructureDefinition for AuditEvent Resource when the event is a FHIR REST Query" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="AuditEvent" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/AuditEvent" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="AuditEvent.type.system">
+      <path value="AuditEvent.type.system" />
+      <min value="1" />
+      <type>
+        <code value="uri" />
+        <profile value="http://dicom.nema.org/resources/ontology/DCM" />
+      </type>
+    </element>
+    <element id="AuditEvent.type.code">
+      <path value="AuditEvent.type.code" />
+      <min value="1" />
+      <type>
+        <code value="code" />
+        <profile value="110112" />
+      </type>
+    </element>
+    <element id="AuditEvent.type.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="AuditEvent.type.display" />
+      <type>
+        <code value="string" />
+        <profile value="Query" />
+      </type>
+    </element>
+    <element id="AuditEvent.subtype">
+      <path value="AuditEvent.subtype" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="AuditEvent.subtype.system">
+      <path value="AuditEvent.subtype.system" />
+      <min value="1" />
+      <type>
+        <code value="uri" />
+        <profile value="http://hl7.org/fhir/restful-interaction" />
+      </type>
+    </element>
+    <element id="AuditEvent.subtype.code">
+      <path value="AuditEvent.subtype.code" />
+      <min value="1" />
+      <type>
+        <code value="code" />
+        <profile value="search" />
+      </type>
+    </element>
+    <element id="AuditEvent.subtype.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="AuditEvent.subtype.display" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+        <profile value="FHIR Search" />
+      </type>
+    </element>
+    <element id="AuditEvent.action">
+      <path value="AuditEvent.action" />
+      <min value="1" />
+      <type>
+        <code value="code" />
+        <profile value="E" />
+      </type>
+    </element>
+    <element id="AuditEvent.recorded">
+      <path value="AuditEvent.recorded" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AuditEvent.outcome">
+      <path value="AuditEvent.outcome" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AuditEvent.outcomeDesc">
+      <path value="AuditEvent.outcomeDesc" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AuditEvent.agent">
+      <path value="AuditEvent.agent" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="role" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="requestor" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="AuditEvent.agent:Requestor">
+      <path value="AuditEvent.agent" />
+      <sliceName value="Requestor" />
+      <short value="Source system that initiated the Query" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AuditEvent.agent:Requestor.role">
+      <path value="AuditEvent.agent.role" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="AuditEvent.agent:Requestor.role.coding.system">
+      <path value="AuditEvent.agent.role.coding.system" />
+      <fixedUri value="http://nema.org/dicom/dicm" />
+    </element>
+    <element id="AuditEvent.agent:Requestor.role.coding.code">
+      <path value="AuditEvent.agent.role.coding.code" />
+      <fixedCode value="110153" />
+    </element>
+    <element id="AuditEvent.agent:Requestor.requestor">
+      <path value="AuditEvent.agent.requestor" />
+      <type>
+        <code value="boolean" />
+        <profile value="false" />
+      </type>
+    </element>
+    <element id="AuditEvent.agent:Responder">
+      <path value="AuditEvent.agent" />
+      <sliceName value="Responder" />
+      <short value="Destination system responding to the Query" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AuditEvent.agent:Responder.role.coding.system">
+      <path value="AuditEvent.agent.role.coding.system" />
+      <fixedUri value="http://nema.org/dicom/dicm" />
+    </element>
+    <element id="AuditEvent.agent:Responder.role.coding.code">
+      <path value="AuditEvent.agent.role.coding.code" />
+      <fixedCode value="110152" />
+    </element>
+    <element id="AuditEvent.agent:Responder.requestor">
+      <path value="AuditEvent.agent.requestor" />
+      <type>
+        <code value="boolean" />
+        <profile value="false" />
+      </type>
+    </element>
+    <element id="AuditEvent.agent:Human">
+      <path value="AuditEvent.agent" />
+      <sliceName value="Human" />
+      <short value="Human that triggeed the query" />
+      <definition value="Some queries are not triggered by a human interaction, so there would be no human identifable.&#xD;&#xA;Servers, if they have a security token available should record the identity." />
+      <min value="0" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AuditEvent.agent:Human.requestor">
+      <path value="AuditEvent.agent.requestor" />
+      <type>
+        <code value="boolean" />
+        <profile value="true" />
+      </type>
+    </element>
+    <element id="AuditEvent.source">
+      <path value="AuditEvent.source" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AuditEvent.entity">
+      <path value="AuditEvent.entity" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type.code" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="role.code" />
+        </discriminator>
+        <description value="SHALL contain the query parameters as requested, and the Patient(s) if known" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="AuditEvent.entity:PatientIdentity">
+      <path value="AuditEvent.entity" />
+      <sliceName value="PatientIdentity" />
+      <short value="Patient identity involved" />
+      <definition value="Where the query is constrained to specific Patient(s); these shall be individually recorded, so that audit analysis can more readily identify transactions involving specific patients." />
+      <meaningWhenMissing value="The Query was not specific to a Patient or set of Patients." />
+      <mustSupport value="true" />
+    </element>
+    <element id="AuditEvent.entity:PatientIdentity.identifier">
+      <path value="AuditEvent.entity.identifier" />
+      <short value="Patient Identifier" />
+      <definition value="Identifies a specific instance of the Patient. The reference should always be version specific." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AuditEvent.entity:PatientIdentity.reference">
+      <path value="AuditEvent.entity.reference" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="AuditEvent.entity:PatientIdentity.type">
+      <path value="AuditEvent.entity.type" />
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+        <profile value="1" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element>
+      <path value="AuditEvent.entity.type.system" />
+      <min value="1" />
+      <type>
+        <code value="uri" />
+        <profile value="http://hl7.org/fhir/audit-entity-type" />
+      </type>
+    </element>
+    <element>
+      <path value="AuditEvent.entity.type.code" />
+      <min value="1" />
+      <type>
+        <code value="code" />
+        <profile value="1" />
+      </type>
+    </element>
+    <element id="AuditEvent.entity:PatientIdentity.role">
+      <path value="AuditEvent.entity.role" />
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+        <profile value="1" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element>
+      <path value="AuditEvent.entity.role.system" />
+      <min value="1" />
+      <type>
+        <code value="uri" />
+        <profile value="http://hl7.org/fhir/object-role" />
+      </type>
+    </element>
+    <element>
+      <path value="AuditEvent.entity.role.code" />
+      <min value="1" />
+      <type>
+        <code value="code" />
+        <profile value="1" />
+      </type>
+    </element>
+    <element id="AuditEvent.entity:PatientIdentity.lifecycle">
+      <path value="AuditEvent.entity.lifecycle" />
+      <max value="0" />
+    </element>
+    <element id="AuditEvent.entity:PatientIdentity.securityLabel">
+      <path value="AuditEvent.entity.securityLabel" />
+      <max value="0" />
+    </element>
+    <element id="AuditEvent.entity:PatientIdentity.name">
+      <path value="AuditEvent.entity.name" />
+      <max value="0" />
+    </element>
+    <element id="AuditEvent.entity:PatientIdentity.description">
+      <path value="AuditEvent.entity.description" />
+      <max value="0" />
+    </element>
+    <element id="AuditEvent.entity:PatientIdentity.query">
+      <path value="AuditEvent.entity.query" />
+      <max value="0" />
+    </element>
+    <element id="AuditEvent.entity:PatientIdentity.detail">
+      <path value="AuditEvent.entity.detail" />
+      <max value="0" />
+    </element>
+    <element id="AuditEvent.entity:QueryParameters">
+      <path value="AuditEvent.entity" />
+      <sliceName value="QueryParameters" />
+      <short value="Query Parameters" />
+      <definition value="Specific query parameters requested." />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AuditEvent.entity:QueryParameters.identifier">
+      <path value="AuditEvent.entity.identifier" />
+      <max value="0" />
+    </element>
+    <element id="AuditEvent.entity:QueryParameters.reference">
+      <path value="AuditEvent.entity.reference" />
+      <max value="0" />
+    </element>
+    <element id="AuditEvent.entity.type">
+      <path value="AuditEvent.entity.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AuditEvent.entity:QueryParameters.type.system">
+      <path value="AuditEvent.entity.type.system" />
+      <min value="1" />
+      <type>
+        <code value="uri" />
+        <profile value="http://hl7.org/fhir/audit-entity-type" />
+      </type>
+    </element>
+    <element id="AuditEvent.entity:QueryParameters.type.code">
+      <path value="AuditEvent.entity.type.code" />
+      <min value="1" />
+      <type>
+        <code value="code" />
+        <profile value="2" />
+      </type>
+    </element>
+    <element id="AuditEvent.entity.role">
+      <path value="AuditEvent.entity.role" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AuditEvent.entity:QueryParameters.role.system">
+      <path value="AuditEvent.entity.role.system" />
+      <min value="1" />
+      <type>
+        <code value="uri" />
+        <profile value="http://hl7.org/fhir/object-role" />
+      </type>
+    </element>
+    <element id="AuditEvent.entity:QueryParameters.role.code">
+      <path value="AuditEvent.entity.role.code" />
+      <min value="1" />
+      <type>
+        <code value="code" />
+        <profile value="24" />
+      </type>
+    </element>
+    <element id="AuditEvent.entity:QueryParameters.lifecycle">
+      <path value="AuditEvent.entity.lifecycle" />
+      <max value="0" />
+    </element>
+    <element id="AuditEvent.entity:QueryParameters.securityLabel">
+      <path value="AuditEvent.entity.securityLabel" />
+      <max value="0" />
+    </element>
+    <element id="AuditEvent.entity:QueryParameters.name">
+      <path value="AuditEvent.entity.name" />
+      <max value="0" />
+    </element>
+    <element id="AuditEvent.entity:QueryParameters.description">
+      <path value="AuditEvent.entity.description" />
+      <max value="0" />
+    </element>
+    <element id="AuditEvent.entity:QueryParameters.query">
+      <path value="AuditEvent.entity.query" />
+      <definition value="the requested URL including query parameters, base64 encoded" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AuditEvent.entity:QueryParameters.detail">
+      <path value="AuditEvent.entity.detail" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AuditEvent.entity:QueryParameters.detail.type">
+      <path value="AuditEvent.entity.detail.type" />
+      <type>
+        <code value="string" />
+        <profile value="http headers" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="AuditEvent.entity:QueryParameters.detail.value">
+      <path value="AuditEvent.entity.detail.value" />
+      <short value="http headers" />
+      <definition value="The http request headers (e.g., Accept Headers), base64 encoded. Used to carry bulk information." />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>
